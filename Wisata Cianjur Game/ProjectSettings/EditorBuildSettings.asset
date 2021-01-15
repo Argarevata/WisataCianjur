@@ -4,5 +4,14 @@
 EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
-  m_Scenes: []
+  m_Scenes:
+  - enabled: 1
+    path: Assets/Scenes/Peta.unity
+    guid: 91b3e026ec07963418a441fbb59b799a
+  - enabled: 1
+    path: Assets/Scenes/Quiz.unity
+    guid: 81f8f8fd92d9a4f40bbdf9a92aea04ff
+  - enabled: 1
+    path: Assets/Scenes/Puzzle.unity
+    guid: c7f10c59e83307b4e95a650a11ec2025
   m_configObjects: {}
