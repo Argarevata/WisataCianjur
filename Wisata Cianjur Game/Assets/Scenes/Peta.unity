@@ -1372,7 +1372,18 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 659481780}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 2111072369}
+        m_MethodName: LoadLevel
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: Puzzle
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &659481780
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1820,7 +1831,18 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 729992404}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 2111072369}
+        m_MethodName: LoadLevel
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: Read
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &729992404
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3969,7 +3991,18 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1371381664}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 2111072369}
+        m_MethodName: LoadLevel
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: Quiz
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1371381664
 MonoBehaviour:
   m_ObjectHideFlags: 0

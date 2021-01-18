@@ -81,4 +81,9 @@ public class PuzzleRandomizer : MonoBehaviour
             }
         }
     }
+
+    public void LoadLevel(string x)
+    {
+        Application.LoadLevel(x);
+    }
 }

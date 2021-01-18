@@ -34,11 +34,20 @@ public class PlayerCon : MonoBehaviour {
 		PlayerPrefs.SetInt("G1", 1);
 		PlayerPrefs.SetInt("G2", 1);
 		PlayerPrefs.SetInt("G0", 1);
-		PlayerPrefs.SetInt("C1", 0);
-		PlayerPrefs.SetInt("C2", 0);
+		PlayerPrefs.SetInt("C1", 1);
+		PlayerPrefs.SetInt("C2", 1);
 		PlayerPrefs.SetInt("C0", 1);
+        PlayerPrefs.SetInt("H1", 1);
+        PlayerPrefs.SetInt("H2", 1);
+        PlayerPrefs.SetInt("H0", 1);
+        PlayerPrefs.SetInt("M1", 1);
+        PlayerPrefs.SetInt("M2", 1);
+        PlayerPrefs.SetInt("M0", 1);
+        PlayerPrefs.SetInt("W1", 1);
+        PlayerPrefs.SetInt("W2", 1);
+        PlayerPrefs.SetInt("W0", 1);
 
-		myBody = GetComponent<Rigidbody2D> ();
+        myBody = GetComponent<Rigidbody2D> ();
 		joy = FindObjectOfType<JoystickCon> ();
 
 		for (int i = 0; i < 5; i++)
@@ -197,4 +206,9 @@ public class PlayerCon : MonoBehaviour {
 		}
 		levelButton[0].interactable = true;
 	}
+
+    public void LoadLevel(string x)
+    {
+        Application.LoadLevel(x);
+    }
 }
