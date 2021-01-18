@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class PlayerCon : MonoBehaviour {
 
@@ -8,34 +9,75 @@ public class PlayerCon : MonoBehaviour {
 	public float speed;
 	public JoystickCon joy;
 	public Animator myAnim;
+	public Camera theCam;
+	public SpriteRenderer[] stars;
 
 	public float xAxis, yAxis;
+	public float camSizeMax, camSizeMin, camZoomMultiplier;
+	public bool camZoomIn { get; set; }
+	public bool camZoomOut { get; set; }
+
+	public GameObject interactBtn;
+	public int[] activeLevel;
+	public Button[] levelButton;
+	public int interactedObject;
+
+	//PLAYERPREFS BOOL
+	// W0, W1, W2 = waduk
+	// M0, M1, M2 = masjid
+	// G0, G1, G2 = gunung
+	// H0, H1, H2 = hutan
+	// C0, C1, C2 = curug
 
 	// Use this for initialization
 	void Start () {
+		PlayerPrefs.SetInt("G1", 1);
+		PlayerPrefs.SetInt("G2", 1);
+		PlayerPrefs.SetInt("G0", 1);
+		PlayerPrefs.SetInt("C1", 0);
+		PlayerPrefs.SetInt("C2", 0);
+		PlayerPrefs.SetInt("C0", 1);
+
 		myBody = GetComponent<Rigidbody2D> ();
 		joy = FindObjectOfType<JoystickCon> ();
+
+		for (int i = 0; i < 5; i++)
+		{
+			for (int j = 0; j < 3; j++)
+			{
+				string x = "";
+				if (i == 0)
+				{
+					x += "W";
+				}
+				else if (i == 1)
+				{
+					x += "M";
+				}
+				else if (i == 2)
+				{
+					x += "G";
+				}
+				else if (i == 3)
+				{
+					x += "H";
+				}
+				else
+				{
+					x += "C";
+				}
+				x += j.ToString();
+
+				if (PlayerPrefs.GetInt(x) == 1)
+				{
+					stars[(i * 3) + j].color = new Color(1, 1, 1, 1);
+				}
+			}
+		}
 	}
 	
 	// Update is called once per frame
 	void Update () {
-
-		//		if (Input.GetKey (KeyCode.A) || joy.inputVector.x >=0.5) {
-		//			myBody.velocity = new Vector2 (-speed, 0);
-		//		}
-		//
-		//		if (Input.GetKey (KeyCode.D)) {
-		//			myBody.velocity = new Vector2 (speed, 0);
-		//		}
-		//
-		//		if (Input.GetKey (KeyCode.W)) {
-		//			myBody.velocity = new Vector2 (0, speed);
-		//		}
-		//
-		//		if (Input.GetKey (KeyCode.S)) {
-		//			myBody.velocity = new Vector2 (0, -speed);
-		//		}
-
 		if (joy.inputVector.x >= 0.7f)
 		{
 			xAxis = 1;
@@ -66,5 +108,93 @@ public class PlayerCon : MonoBehaviour {
 		myBody.velocity = new Vector2(xAxis * speed, yAxis * speed);
 		myAnim.SetFloat("X", xAxis);
 		myAnim.SetFloat("Y", yAxis);
+
+		if (camZoomIn)
+		{
+			if (theCam.orthographicSize > camSizeMin)
+			{
+				theCam.orthographicSize -= Time.deltaTime * camZoomMultiplier;
+			}
+		}
+
+		if (camZoomOut)
+		{
+			if (theCam.orthographicSize < camSizeMax)
+			{
+				theCam.orthographicSize += Time.deltaTime * camZoomMultiplier;
+			}
+		}
+	}
+
+    private void OnTriggerEnter2D(Collider2D other)
+    {
+		if (other.tag == "wisata")
+		{
+			other.transform.localScale = new Vector2(0.4f, 0.4f);
+			interactBtn.SetActive(true);
+
+			if (other.name == "Waduk")
+			{
+				activeLevel[0] = PlayerPrefs.GetInt("W0");
+				activeLevel[1] = PlayerPrefs.GetInt("W1");
+				activeLevel[2] = PlayerPrefs.GetInt("W2");
+				interactedObject = 0;
+			}
+			else if (other.name == "Masjid")
+			{
+				activeLevel[0] = PlayerPrefs.GetInt("M0");
+				activeLevel[1] = PlayerPrefs.GetInt("M1");
+				activeLevel[2] = PlayerPrefs.GetInt("M3");
+				interactedObject = 1;
+			}
+			else if (other.name == "Gunung")
+			{
+				activeLevel[0] = PlayerPrefs.GetInt("G0");
+				activeLevel[1] = PlayerPrefs.GetInt("G1");
+				activeLevel[2] = PlayerPrefs.GetInt("G2");
+				interactedObject = 2;
+			}
+			else if (other.name == "Hutan")
+			{
+				activeLevel[0] = PlayerPrefs.GetInt("H0");
+				activeLevel[1] = PlayerPrefs.GetInt("H1");
+				activeLevel[2] = PlayerPrefs.GetInt("H2");
+				interactedObject = 3;
+			}
+			else if (other.name == "Curug")
+			{
+				activeLevel[0] = PlayerPrefs.GetInt("C0");
+				activeLevel[1] = PlayerPrefs.GetInt("C1");
+				activeLevel[2] = PlayerPrefs.GetInt("C2");
+				interactedObject = 4;
+			}
+
+			RefreshButton();
+		}
+    }
+
+    private void OnTriggerExit2D(Collider2D other)
+    {
+		if (other.tag == "wisata")
+		{
+			other.transform.localScale = new Vector2(0.3f, 0.3f);
+			interactBtn.SetActive(false);
+		}
+	}
+
+	public void RefreshButton()
+	{
+		for (int i = 1; i < 3; i++)
+		{
+			if (activeLevel[i-1] == 1)
+			{
+				levelButton[i].interactable = true;
+			}
+			else
+			{
+				levelButton[i].interactable = false;
+			}
+		}
+		levelButton[0].interactable = true;
 	}
 }
