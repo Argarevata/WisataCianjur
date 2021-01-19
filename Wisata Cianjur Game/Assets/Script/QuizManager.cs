@@ -29,6 +29,7 @@ public class QuizManager : MonoBehaviour
 
     private void Awake()
     {
+        whatLevel = PlayerPrefs.GetInt("level");
         for (int i = 0; i < 5; i++)
         {
             questions[i] = questionPool[(whatLevel * 5) + i];
@@ -52,6 +53,14 @@ public class QuizManager : MonoBehaviour
         }
     }
 
+    private void Update()
+    {
+        if (Input.GetKeyDown(KeyCode.Escape))
+        {
+            Application.LoadLevel("Peta");
+        }
+    }
+
     public void Answering(bool x)
     {
         if (x)
@@ -71,6 +80,36 @@ public class QuizManager : MonoBehaviour
             {
                 print("DONE");
                 winScreen.SetActive(true);
+                //UNLOCK NEXT STAGE
+                //KASIH BINTANG
+                switch (whatLevel)
+                {
+                    case 0:
+                        {
+                            PlayerPrefs.SetInt("W1", 1);
+                            break;
+                        }
+                    case 1:
+                        {
+                            PlayerPrefs.SetInt("M1", 1);
+                            break;
+                        }
+                    case 2:
+                        {
+                            PlayerPrefs.SetInt("G1", 1);
+                            break;
+                        }
+                    case 3:
+                        {
+                            PlayerPrefs.SetInt("H1", 1);
+                            break;
+                        }
+                    case 4:
+                        {
+                            PlayerPrefs.SetInt("C1", 1);
+                            break;
+                        }
+                }
             }
         }
         else

@@ -20,7 +20,8 @@ public class PlayerCon : MonoBehaviour {
 	public GameObject interactBtn;
 	public int[] activeLevel;
 	public Button[] levelButton;
-	public int interactedObject;
+	public int interactedObject; //ada juga playerprefs nyaa
+	public float playerPosX, playerPosY; //ada juga playerprefs nyaa
 
 	//PLAYERPREFS BOOL
 	// W0, W1, W2 = waduk
@@ -31,24 +32,29 @@ public class PlayerCon : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
-		PlayerPrefs.SetInt("G1", 1);
-		PlayerPrefs.SetInt("G2", 1);
-		PlayerPrefs.SetInt("G0", 1);
-		PlayerPrefs.SetInt("C1", 1);
-		PlayerPrefs.SetInt("C2", 1);
-		PlayerPrefs.SetInt("C0", 1);
-        PlayerPrefs.SetInt("H1", 1);
-        PlayerPrefs.SetInt("H2", 1);
-        PlayerPrefs.SetInt("H0", 1);
-        PlayerPrefs.SetInt("M1", 1);
-        PlayerPrefs.SetInt("M2", 1);
-        PlayerPrefs.SetInt("M0", 1);
-        PlayerPrefs.SetInt("W1", 1);
-        PlayerPrefs.SetInt("W2", 1);
-        PlayerPrefs.SetInt("W0", 1);
+		//PlayerPrefs.SetInt("G1", 0);
+		//PlayerPrefs.SetInt("G2", 0);
+		//PlayerPrefs.SetInt("G0", 0);
+		//PlayerPrefs.SetInt("C1", 0);
+		//PlayerPrefs.SetInt("C2", 0);
+		//PlayerPrefs.SetInt("C0", 0);
+		//      PlayerPrefs.SetInt("H1", 0);
+		//      PlayerPrefs.SetInt("H2", 0);
+		//      PlayerPrefs.SetInt("H0", 0);
+		//      PlayerPrefs.SetInt("M1", 0);
+		//      PlayerPrefs.SetInt("M2", 0);
+		//      PlayerPrefs.SetInt("M0", 0);
+		//      PlayerPrefs.SetInt("W1", 0);
+		//      PlayerPrefs.SetInt("W2", 0);
+		//      PlayerPrefs.SetInt("W0", 0);
 
-        myBody = GetComponent<Rigidbody2D> ();
+		playerPosX = PlayerPrefs.GetFloat("posX");
+		playerPosY = PlayerPrefs.GetFloat("posY");
+
+		myBody = GetComponent<Rigidbody2D> ();
 		joy = FindObjectOfType<JoystickCon> ();
+
+		transform.position = new Vector2(playerPosX, playerPosY);
 
 		for (int i = 0; i < 5; i++)
 		{
@@ -87,6 +93,9 @@ public class PlayerCon : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
+		PlayerPrefs.SetFloat("posX", transform.position.x);
+		PlayerPrefs.SetFloat("posY", transform.position.y);
+
 		if (joy.inputVector.x >= 0.7f)
 		{
 			xAxis = 1;
@@ -139,7 +148,7 @@ public class PlayerCon : MonoBehaviour {
     {
 		if (other.tag == "wisata")
 		{
-			other.transform.localScale = new Vector2(0.4f, 0.4f);
+			other.transform.localScale = new Vector2(0.225f, 0.225f);
 			interactBtn.SetActive(true);
 
 			if (other.name == "Waduk")
@@ -177,7 +186,7 @@ public class PlayerCon : MonoBehaviour {
 				activeLevel[2] = PlayerPrefs.GetInt("C2");
 				interactedObject = 4;
 			}
-
+			PlayerPrefs.SetInt("level", interactedObject);
 			RefreshButton();
 		}
     }
@@ -186,7 +195,7 @@ public class PlayerCon : MonoBehaviour {
     {
 		if (other.tag == "wisata")
 		{
-			other.transform.localScale = new Vector2(0.3f, 0.3f);
+			other.transform.localScale = new Vector2(0.15f, 0.15f);
 			interactBtn.SetActive(false);
 		}
 	}

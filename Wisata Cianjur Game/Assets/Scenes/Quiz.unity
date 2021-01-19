@@ -947,132 +947,132 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   questionPool:
-  - Pertanyaan 1A
-  - Pertanyaan 2A
-  - Pertanyaan 3A
-  - Pertanyaan 4A
-  - Pertanyaan 5A
-  - Pertanyaan 1B
-  - Pertanyaan 2B
-  - Pertanyaan  3B
-  - Pertanyaan 4B
-  - Pertanyaan 5B
-  - Pertanyaan 1C
-  - Pertanyaan 2C
-  - Pertanyaan 3c
-  - Pertanyaan 4C
-  - Pertanyaan 5C
-  - Pertanyaan 1D
-  - Pertanyaan 2D
-  - Pertanyaan 3D
-  - Pertanyaan 4D
-  - Pertanyaan 5D
-  - Pertanyaan 1E
-  - Pertanyaan 2E
-  - Pertanyaan 3E
-  - Pertanyaan 4E
-  - Pertanyaan 5E
+  - Waduk Cirata berada di mana?
+  - Waduk Cirata dimanfaatkan juga sebagai?
+  - Waduk Cirata merupakan PLTA terbesar di?
+  - Produksi listrik Waduk Cirata per tahun adalah?
+  - Harga tiket masuk mobil di Waduk Cirata adalah?
+  - Berapa banyak Masjid ini sudah dipugar?
+  - Pada tahun berapa Masjid Agung didirikan?
+  - Masjid Agung Cianjur sering dijuluki sebagai?
+  - Ada berapa menara di atas bangunan?
+  - Apa bentuk menara di Masjid Agung Cianjur?
+  - Gunug Padang merupakan situs megalitik terbesar di mana?
+  - Berapa luas situs megalitik di Gunung Padang?
+  - Apa keunikan batu di Gunung Padang?
+  - Berapa usia situs megalitik di Gunung Padang?
+  - Ada bangunan apa di Gunung Padang pada masa lampau?
+  - Apa singkatan dari Hutan Kota Cianjur?
+  - Berapa luas dari Hukoci?
+  - Apa fasilitas yang ada di Hukoci?
+  - Jam operasional Hukoci adalah...
+  - Bagaimana keadaan udara di hukoci?
+  - Berapa ketinggian Curug Cikondang?
+  - Curug Cikondang mirip dengan apa?
+  - Berapa harga tiket masuk Curug Cikondang?
+  - Ada pemandangan apa di sekitar Curug Cikondang?
+  - Berapa lebar Curug Cikondang?
   answerPool:
-  - True A1
-  - False A1
-  - False A1
-  - False A1
-  - True B1
-  - Flase B1
-  - Flase B1
-  - Flase B1
-  - True C1
-  - Flase C1
-  - Flase C1
-  - Flase C1
-  - True D1
-  - Flalse D1
-  - Flalse D1
-  - Flalse D1
-  - True E1
-  - False E1
-  - False E1
-  - False E1
-  - True A2
-  - False
-  - False
-  - False
-  - True B2
-  - False
-  - False
-  - False
-  - True C2
-  - False
-  - False
-  - False
-  - True D2
-  - False
-  - False
-  - False
-  - True E2
-  - False
-  - False
-  - False
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
+  - Cianjur
+  - Jakarta
+  - Depok
+  - Tangerang
+  - PLTA
+  - PLTN
+  - PLTU
+  - PLTS
+  - Asia Tenggara
+  - Eropa
+  - Asia
+  - Dunia
+  - 1.428 GigaWatt
+  - 2.000 GigaWatt
+  - 1.000 GigaWatt
+  - 1.250 GigaWatt
+  - Rp 5.000
+  - Rp 50.000
+  - Rp 1.000
+  - Rp 10.000
+  - 7 kali
+  - 6 kali
+  - 5 kali
+  - 8 kali
+  - 1810
+  - 1820
+  - 1910
+  - 2010
+  - Balai Nyungcut
+  - Balai Kartini
+  - Masjid Kerucut
+  - Masjid 3 Menara
+  - 3
+  - 2
+  - 1
+  - 4
+  - Kerucut
+  - Setengah Lingkaran
+  - Kotak
+  - Trapesium
+  - Asia
+  - Afrika
+  - Amerika
+  - Australia
+  - 900 meter persegi
+  - 200 meter persegi
+  - 500 meter persegi
+  - 256 meter persegi
+  - Bisa berbunyi
+  - Bisa bergerak
+  - Bisa menghilang
+  - Bisa bercahaya
+  - 8000 - 28.000 tahun
+  - 7000 - 10.000 tahun
+  - 6000 - 8.000 tahun
+  - 1000 - 2000 tahun
+  - Kuil
+  - Sekolah
+  - Colosseum
+  - Rumah
+  - Hukoci
+  - Huciko
+  - Kicohu
+  - Hicoku
+  - 15 hektar
+  - 14 hektar
+  - 13 hektar
+  - 16 hektar
+  - flying fox
+  - aquarium
+  - laboratorium
+  - planetarium
+  - pukul 08:00 - 18:00
+  - pukul 06:00 - 16:00
+  - pukul 10:00 - 20:00
+  - 24 jam
+  - Bersih dan segar
+  - Biasa saja
+  - Kotor dan pengap
+  - Panas dan gersang
+  - 50 meter
+  - 60 meter
+  - 70 meter
+  - 40 meter
+  - Air terjun Niagara
+  - Air Terjun Angelfall
+  - Air Mancur Monas
+  - Air Terjun Cibereum
+  - Rp 5.000
+  - Rp 15.000
+  - Rp 10.000
+  - Rp 1.000
+  - Kebun teh dan terasering
+  - Gedung Tinggi
+  - Laut
+  - Danau
+  - 30 meter
+  - 20 meter
+  - 10 meter
+  - 40 meter
   questionText: {fileID: 1660088614}
   answerButton:
   - {fileID: 547789387}
@@ -2245,7 +2245,7 @@ MonoBehaviour:
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
-          m_StringArgument: Peta
+          m_StringArgument: Puzzle
           m_BoolArgument: 0
         m_CallState: 2
 --- !u!114 &1685448012

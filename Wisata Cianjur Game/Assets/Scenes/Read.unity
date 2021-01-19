@@ -279,6 +279,109 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5e46c3c22fdc8494787260b8faf0316a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  myImage: {fileID: 106960087}
+  myText: {fileID: 852080097}
+  mySprites:
+  - {fileID: 21300032, guid: 2d97a64e464539545999ce805d29c5f6, type: 3}
+  - {fileID: 21300032, guid: c31e36b60be6c2f4a8bf982f133287f9, type: 3}
+  - {fileID: 21300032, guid: c976989d7a2faa04e965f43f4f502cc0, type: 3}
+  - {fileID: 21300032, guid: 5043c7966cf7a754988b3817202947af, type: 3}
+  - {fileID: 21300032, guid: 763652880da92f94f806004b9d5b503e, type: 3}
+  myStrings:
+  - "Obyek Wisata Waduk Cirata di Cianjur Jawa Barat merupakan tempat wisata yang
+    harus anda kunjungi karena pesona keindahannya tidak ada duanya. Penduduk lokal
+    daerah cianjur juga sangat ramah tamah terhadap wisatawan lokal maupun wisatawan
+    asing. Kota cianjur juga terkenal akan keindahan obyek wisatanya , salah satu
+    contohnya adalah Obyek Wisata Waduk Cirata di Cianjur Jawa Barat ini. Obyek Wisata
+    Waduk Cirata di Cianjur Jawa Barat merupakan PLTA terbesar di Asia Tenggara. PLTA
+    ini memiliki konstruksi power house di bawah tanah dengan kapasitas 8\xD7126 Megawatt
+    (MW) sehingga total kapasitas terpasang 1.008 Megawatt (MW) dengan produksi energi
+    listrik rata-rata 1.428 Giga Watthour (GWh) pertahun. Obyek Wisata Waduk Cirata
+    di Cianjur Jawa Barat bisa dibilang sebuah wisata alam yang memiliki beberapa
+    akan fasilitas dan pelayanan di antaranya adalah: area parkir kendaraan, Mushola,
+    Kamar mandi / MCK, Penginapan, dan masih banyak lainya. Waduk Cirata buka 24 jam
+    non stop dengan harga tiket masuk Rp 3.000 untuk motor dan Rp 5.000 untuk mobil,
+    tidak  termasuk harga parkir. "
+  - 'Terletak di jantung kota, Masjid Agung Cianjur tampak sangat mencolok di antara
+    taman kota, pasar, dan gedung pemerintahan Kabupaten Cianjur. Posisi masjid ini
+    memang sengaja dibuat lebih tinggi. Bukan tanpa sebab, namun sebagai simbolisasi
+    derajat kegiatan peri bada han yang lebih tinggi dibandingkan kegiatan-kegiatan
+    lain. Masjid yang telah dipugar tujuh kali tersebut kini menjadi ikon kota Cianjur.
+    Ciri khas awal yang paling kentara adalah tiga menara di atas bangunan utama yang
+    berbentuk kerucut khas rumah joglo atau dalam bahasa Sunda disebut nyungcut. Bentuk
+    ini pula yang menjadikan masjid ini kerap dijuluki Balai Nyungcut sejak didirikan
+    pada tahun 1810. Bagian pinggir menara dihiasi ram kaca patri, sedangkan bagian
+    atasnya dihiasi lampu malo, khusus untuk menerangi kalimat Allah yang dilingkari
+    bulan sabit. Memasuki area masjid, taman dengan aneka bunga berwarna-warni yang
+    indah akan menyapa pengunjung. Di bagian depan masjid tampak lengkungan-lengkungan
+    bercorak seni arsitektur Timur Tengah dan kedaerahan Indonesia. Keindahan corak
+    arsitektural ini berpadu serasi dengan penggunaan batu alam yang dominan berwarna
+    hijau di teras depan. Tepat di bagian tengah teras masjid terdapat pintu masuk
+    dengan langit- langit berbentuk seperempat kubah bernuansa kekuningan yang dipadu
+    dengan hiasan berupa ukiran dan mozaik granit, menambah detail keindahan bagian
+    depan masjid. Memasuki bagian dalam masjid, tampak ruang utama ibadah yang terdiri
+    dari ruang induk-dibatasi pintu dan ram kaca yang memadukan gaya arsitektur khas
+    Indonesia dan Timur Tengah-dan selasar yang dapat digunakan untuk tempat shalat.
+    Sementara itu, di lantai dua ruang utama, melingkar area persegi yang bagian tengahnya
+    menembus ke tingkat dasar sehingga tampak berfungsi sebagai mezzanine. Area ini
+    dihiasi dengan detail ornamen khas Islam yang sangat indah. '
+  - 'Diketahui jika Gunung Padang konon merupakan warisan megalitik terbesar di Asia
+    dengan luas sebesar 900 meter persegi dan mengalahkan piramida di Mesir. Gunung
+    Padang menawarkan berbagai bentuk susunan batu unik dengan segala keindahan pemandangan
+    alam yang luar biasa. Salah satu keunikan dari situs tersebut adalah beberapa
+    bagian batunya bisa mengeluarkan bunyi-bunyian seperti alat musik, dengan ciri
+    khas nada tertentu. Sebagian besar bebatuan dari wilayah Gunung Padang merupakan
+    batu dari jenis andesit basaltis dan sebagian besar berwarna abu-abu gelap. Selain
+    terbesar, situs yang berlokasi di Desa Karyamukti, Kecamatan Campaka, Kabupaten
+    Cianjur, ini juga merupakan mahakarya megalitik tertua di dunia yang diperkirakan
+    berusia 8.000 hingga 28.000 tahun, lebih tua dari piramid Giza, Mesir. Belakangan
+    situs itu diidentifikasi sebagai kuil kuno dengan lima teras yang menyusunnya.
+    Di mana pada teras atau puncak yang tertinggi dipercaya oleh warga setempat sebagai
+    tempat untuk bersemedi atau mendalami ilmu pada masa lampau. '
+  - 'Hukoci merupakan singkatan dari Hutan Kota Cianjur, yang merupakan sebuah hutan
+    yang sangat rindang dengan berada di area yang cukup luas yakni sekitar 15 hektar.
+    Hutan Kota Cianjur (Hukoci) tempat dimana banyak masyarakat melakukan aktivitas
+    olahraga ataupun hanya bersantai dan bermain bersama anak-anak tercinta. Keadaan
+    udara yang bersih dan segar terbebas dari polusi yang selama ini mengganggu. Alamnya
+    yang tenang menjadikannya tempat yang tepat untuk mendirikan tenda. Kamu juga
+    dapat menjajal jalur trekking sepeda yang ada di area Hukoci, dan untuk melengkapi
+    itu semua tersedia wahana flying fox, arena berkuda, serta memanah. Fungsi hutan
+    yang sebagai paru-paru kota begitu terasa ketika berada di kawasan Hukoci, selain
+    menghirup udara yang bersih kamu pun dapat langsung melihat pemandangan Gunung
+    Mananggel. Lokasi Hutan Kota Cianjur atau Hukoci ini berada di Desa Babakan Karet,
+    Kecamatan Cianjur, Kabupaten Cianjur, Provinsi Jawa Barat. Fasilitas yang ada
+    di Hukoci sudah mendukung kegiatan yang akan dilakukan oleh pengunjung, seperti:
+    Area parkir, toilet, warung makan dan minum, lintasan sepeda, camping ground,
+    flying fox, berkuda dan memanah Jam operasional Hukoci dibuka setiap hari mulai
+    pukul 08.00 pagi hingga pukul 18.00. Waktu terbaik untuk mengunjungi lokasi wisata
+    yang satu ini ialah dipagi hari, dimana udaranya masih sangat menyegarkan. '
+  - "curug cikondang cianjur, wisata curug cikondang bogorCurug Cikondang adalah satu
+    dari sekian banyak tempat wisata di Cianjur yang cukup menarik untuk di kunjungi.
+    Air terjun yang memiliki ketinggian kurang lebih sekitar 50 meter dan lebar 30
+    meter ini memang sekilas mirip Air Terjun Niagara jika di lihat dari jarak dekat.
+    \ Bahkan di situs National Geographic Indonesia di sebutkan jika Curug Cikondang
+    ini adalah Niagara Mini-nya Indonesia. Tidak hanya penampilannya yang mirip dengan
+    Niagara Mini saja, pemandangan alam yang ada di sekitar lokasi air terjun juga
+    cukup menghibur mata, cocok sekali bagi Anda yang ingin melepaskan diri dari penatnya
+    suasana kota. Di sekitar area wisata Air Terjun Cikondang Anda akan melihat hamparan
+    perkebunan teh dan sawah-sawah terasiring yang cukup menghipnotis mata. Untuk
+    bisa sampai di lokasi curug, Anda bisa menggunakan rute melalui Jl. Raya Cianjur
+    \u2013 Sukabumi. Ambil jalan ke kiri ke arah Jl. Cilaku menuju ke Cibeber. Jika
+    Anda berangkat dari Cianjur maka rute ini yang sebaiknya Anda pilih karena lebih
+    dekat. Selain itu jalannya juga bisa di katakana lebih lumayan bagus. Alternatif
+    kedua bisa juga melalui rute yang melewati jalur Warung Kondang \u2013 Lampegan.
+    \ Harga tiket masuk ke Curug Cikondang terbilang masih cukup murah, anda hanya
+    perlu membayar Rp. 5000 per orang untuk bisa masuk. Jika Anda membawa kendaraan
+    sendiri baik mobil atau motor Anda mungkin bisa menitipkannya di rumah-rumah warga
+    Desa Sukadana yang ada  di dekat jalan masuk ke lokasi. "
+  myTitle: {fileID: 658576187}
+  myTitleString:
+  - Waduk Cirata
+  - Masjid Agung
+  - Gunung Padang
+  - Hutan Kota Cianjur
+  - Curug Cikondang
+  whatLevel: 0
 --- !u!4 &241644917
 Transform:
   m_ObjectHideFlags: 0
@@ -620,7 +723,7 @@ MonoBehaviour:
     m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
     m_FontSize: 35
     m_FontStyle: 1
-    m_BestFit: 0
+    m_BestFit: 1
     m_MinSize: 1
     m_MaxSize: 100
     m_Alignment: 0
@@ -629,7 +732,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
+  m_Text: 'Nomor 1 ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
     tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis
     nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
     Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu
@@ -746,7 +849,7 @@ MonoBehaviour:
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
-          m_StringArgument: Peta
+          m_StringArgument: Quiz
           m_BoolArgument: 0
         m_CallState: 2
 --- !u!114 &1065665392

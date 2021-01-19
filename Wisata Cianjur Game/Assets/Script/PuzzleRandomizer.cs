@@ -21,7 +21,7 @@ public class PuzzleRandomizer : MonoBehaviour
     private void Awake()
     {
         RandomizePosition();
-
+        whatLevel = PlayerPrefs.GetInt("level");
         for (int i = 0; i < 16; i++)
         {
             puzzlePieceRenderer[i].sprite = puzzleImage[(whatLevel*16)+i];
@@ -46,9 +46,45 @@ public class PuzzleRandomizer : MonoBehaviour
                 win = true;
                 print("WIN YEAY");
                 winScreen.SetActive(true);
+
+                //UNLOCK NEXT STAGE
+                //KASIH BINTANG
+                switch (whatLevel)
+                {
+                    case 0:
+                        {
+                            PlayerPrefs.SetInt("W2", 1);
+                            break;
+                        }
+                    case 1:
+                        {
+                            PlayerPrefs.SetInt("M2", 1);
+                            break;
+                        }
+                    case 2:
+                        {
+                            PlayerPrefs.SetInt("G2", 1);
+                            break;
+                        }
+                    case 3:
+                        {
+                            PlayerPrefs.SetInt("H2", 1);
+                            break;
+                        }
+                    case 4:
+                        {
+                            PlayerPrefs.SetInt("C2", 1);
+                            break;
+                        }
+                }
             }
         }
-        
+
+        if (Input.GetKeyDown(KeyCode.Escape))
+        {
+            Application.LoadLevel("Peta");
+        }
+
     }
 
     public void RandomizePosition()
