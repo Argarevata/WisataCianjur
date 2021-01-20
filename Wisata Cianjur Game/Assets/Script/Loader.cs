@@ -13,48 +13,54 @@ public class Loader : MonoBehaviour
     public string[] myTitleString;
 
     public int whatLevel;
+    public bool isInMainMenu;
 
     private void Start()
     {
-        whatLevel = PlayerPrefs.GetInt("level");
+        if (!isInMainMenu)
+        {
+            whatLevel = PlayerPrefs.GetInt("level");
 
-        myImage.sprite = mySprites[whatLevel];
-        myText.text = myStrings[whatLevel];
-        myTitle.text = myTitleString[whatLevel];
+            myImage.sprite = mySprites[whatLevel];
+            myText.text = myStrings[whatLevel];
+            myTitle.text = myTitleString[whatLevel];
+        }
     }
 
     public void LoadScene(string x)
     {
-        //UNLOCK NEXT STAGE
-        //KASIH BINTANG
-        switch (whatLevel)
+        if (!isInMainMenu)
         {
-            case 0:
-                {
-                    PlayerPrefs.SetInt("W0", 1);
-                    break;
-                }
-            case 1:
-                {
-                    PlayerPrefs.SetInt("M0", 1);
-                    break;
-                }
-            case 2:
-                {
-                    PlayerPrefs.SetInt("G0", 1);
-                    break;
-                }
-            case 3:
-                {
-                    PlayerPrefs.SetInt("H0", 1);
-                    break;
-                }
-            case 4:
-                {
-                    PlayerPrefs.SetInt("C0", 1);
-                    break;
-                }
+            switch (whatLevel)
+            {
+                case 0:
+                    {
+                        PlayerPrefs.SetInt("W0", 1);
+                        break;
+                    }
+                case 1:
+                    {
+                        PlayerPrefs.SetInt("M0", 1);
+                        break;
+                    }
+                case 2:
+                    {
+                        PlayerPrefs.SetInt("G0", 1);
+                        break;
+                    }
+                case 3:
+                    {
+                        PlayerPrefs.SetInt("H0", 1);
+                        break;
+                    }
+                case 4:
+                    {
+                        PlayerPrefs.SetInt("C0", 1);
+                        break;
+                    }
+            }
         }
+        
 
         Application.LoadLevel(x);
     }
@@ -63,7 +69,19 @@ public class Loader : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.Escape))
         {
-            Application.LoadLevel("Peta");
+            if (!isInMainMenu)
+            {
+                Application.LoadLevel("Peta");
+            }
+            else
+            {
+                Application.Quit();
+            }
         }
+    }
+
+    public void QuitTheGame()
+    {
+        Application.Quit();
     }
 }
