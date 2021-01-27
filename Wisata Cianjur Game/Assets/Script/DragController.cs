@@ -21,11 +21,14 @@ public class DragController : MonoBehaviour {
 	//Apakah objek sudah terkunci di posisi target
 	public bool locked;
 
+	public SFX theSFX;
+
 	// Use this for initialization
 	void Start () {
 		locked = false;
 		onTarget = false;
 		initialPosition = transform.position;
+		theSFX = FindObjectOfType<SFX>();
 	}
 	
 	// Update is called once per frame
@@ -39,6 +42,7 @@ public class DragController : MonoBehaviour {
 			deltaX = Camera.main.ScreenToWorldPoint (Input.mousePosition).x - transform.position.x;
 			deltaY = Camera.main.ScreenToWorldPoint (Input.mousePosition).y - transform.position.y;
 			transform.localScale = clickedSize;
+			theSFX.assignedSFX.Play();
 		}
 	}
 
@@ -59,6 +63,7 @@ public class DragController : MonoBehaviour {
 			transform.position = targetObject.transform.position;
 			transform.localScale = clickedSize;
 			locked = true;
+			theSFX.sprinkleSFX.Play();
 		}
 	}
 

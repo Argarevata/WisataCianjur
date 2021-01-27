@@ -25,7 +25,8 @@ public class QuizManager : MonoBehaviour
     public GameObject winScreen, loseScreen;
 
     public int whatLevel;
-
+    public SFX theSfx;
+    public AudioSource BGM;
 
     private void Awake()
     {
@@ -43,6 +44,7 @@ public class QuizManager : MonoBehaviour
 
     void Start()
     {
+        theSfx = FindObjectOfType<SFX>();
         RandomizeBtnPos();
         currentQuestion = 0;
         questionText.text = questions[currentQuestion];
@@ -68,6 +70,7 @@ public class QuizManager : MonoBehaviour
             currentQuestion++;
             if (currentQuestion < questions.Length)
             {
+                theSfx.sprinkleSFX.Play();
                 RandomizeBtnPos();
                 questionText.text = questions[currentQuestion];
                 for (int i = 0; i < 4; i++)
@@ -78,7 +81,9 @@ public class QuizManager : MonoBehaviour
             }
             else
             {
+                theSfx.winSFX.Play();
                 print("DONE");
+                BGM.Stop();
                 winScreen.SetActive(true);
                 //UNLOCK NEXT STAGE
                 //KASIH BINTANG
@@ -114,6 +119,8 @@ public class QuizManager : MonoBehaviour
         }
         else
         {
+            theSfx.loseSFX.Play();
+            BGM.Stop();
             loseScreen.SetActive(true);
         }
     }

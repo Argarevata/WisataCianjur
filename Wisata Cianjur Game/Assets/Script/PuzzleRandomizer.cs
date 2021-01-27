@@ -17,6 +17,8 @@ public class PuzzleRandomizer : MonoBehaviour
     public int whatLevel;
     public bool win;
     public GameObject winScreen;
+    public SFX theSFX;
+    public AudioSource bgm;
 
     private void Awake()
     {
@@ -45,8 +47,9 @@ public class PuzzleRandomizer : MonoBehaviour
             {
                 win = true;
                 print("WIN YEAY");
+                bgm.Stop();
                 winScreen.SetActive(true);
-
+                theSFX.winSFX.Play();
                 //UNLOCK NEXT STAGE
                 //KASIH BINTANG
                 switch (whatLevel)

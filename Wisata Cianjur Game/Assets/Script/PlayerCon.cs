@@ -23,6 +23,8 @@ public class PlayerCon : MonoBehaviour {
 	public int interactedObject; //ada juga playerprefs nyaa
 	public float playerPosX, playerPosY; //ada juga playerprefs nyaa
 
+	public SFX theSFX;
+
 	//PLAYERPREFS BOOL
 	// W0, W1, W2 = waduk
 	// M0, M1, M2 = masjid
@@ -142,6 +144,11 @@ public class PlayerCon : MonoBehaviour {
 				theCam.orthographicSize += Time.deltaTime * camZoomMultiplier;
 			}
 		}
+
+		if (Input.GetKeyDown(KeyCode.Escape))
+		{
+			Application.LoadLevel("MainMenu");
+		}
 	}
 
     private void OnTriggerEnter2D(Collider2D other)
@@ -150,6 +157,7 @@ public class PlayerCon : MonoBehaviour {
 		{
 			other.transform.localScale = new Vector2(0.225f, 0.225f);
 			interactBtn.SetActive(true);
+			theSFX.blipSFX.Play();
 
 			if (other.name == "Waduk")
 			{
@@ -202,6 +210,7 @@ public class PlayerCon : MonoBehaviour {
 
 	public void RefreshButton()
 	{
+		theSFX.blipSFX.Play();
 		for (int i = 1; i < 3; i++)
 		{
 			if (activeLevel[i-1] == 1)
